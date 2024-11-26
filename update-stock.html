@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Stock - AgriConnect</title>
+    <link rel="stylesheet" href="css/update-stock.css">
+    <script src="js/update-stock.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AgriConnect - Admin</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="update-stock.html">Update Stock</a></li>
+                <li><a href="add-product.html">Add Product</a></li>
+                <li><a href="admin-transactions.html">View Transactions</a></li>
+                <li><a href="index.html" class="btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="update-stock-container">
+            <h2>Update Product Stock</h2>
+
+            <form id="update-stock-form">
+                <label for="product-id">Product ID</label>
+                <input type="text" id="product-id" name="product-id" placeholder="Enter Product ID" required>
+
+                <label for="product-name">Product Name</label>
+                <input type="text" id="product-name" name="product-name" placeholder="Enter Product Name" required>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Enter New Stock Quantity" required>
+
+                <button type="submit">Update Stock</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AgriConnect. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

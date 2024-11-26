@@ -1,0 +1,176 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* Full Page Background */
+body {
+    background-image: url('images/background\ 3.jpg'); /* Update this URL to your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header Styles */
+.client-header {
+    background-color: rgba(10, 135, 14, 0.9); /* Semi-transparent green */
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.client-header .logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.client-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.client-header nav ul li {
+    display: inline;
+}
+
+.client-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.client-header nav ul li a:hover {
+    background-color: #3e8e41;
+    transition: background-color 0.3s;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Main Section */
+.client-main {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.welcome-section {
+    margin-bottom: 3rem;
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+}
+
+.client-dashboard {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+/* Add Slide Animation */
+.animate-slide {
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+.dashboard-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+.dashboard-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-card .btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.dashboard-card .btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Footer Styles */
+.client-footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.client-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .client-dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-card {
+        width: 90%;
+    }
+}

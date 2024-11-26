@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AgriConnect</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="login-container">
+        <h2>Login to AgriConnect</h2>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </main>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Validate credentials (for demonstration purposes; replace with server-side validation)
+            if (username === 'admin' && password === 'admin123') {
+                // Redirect to admin portal
+                window.location.href = "admin-portal.html";
+            } else if (username === 'client' && password === 'client123') {
+                // Redirect to client portal
+                window.location.href = "client-portal.html";
+            } else {
+                alert('Invalid credentials! Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>

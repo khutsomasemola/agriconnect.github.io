@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - AgriConnect</title>
+    <link rel="stylesheet" href="css/checkout.css">
+    <script src="js/checkout.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AgriConnect</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="client-portal.html">Dashboard</a></li>
+                <li><a href="index.html" class="btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <h2>Checkout</h2>
+
+            <!-- Order Summary Section -->
+            <section class="order-summary">
+                <h3>Order Summary</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="order-summary">
+                        <!-- Populated dynamically -->
+                    </tbody>
+                </table>
+                <p><strong>Delivery Option:</strong></p>
+                <select id="delivery-option" onchange="updateTotalAmount()">
+                    <option value="standard" data-price="50">Standard Delivery - R50</option>
+                    <option value="fast" data-price="100">Fast Delivery - R100</option>
+                    <option value="pickup" data-price="0">Pickup (Free)</option>
+                </select>
+                <p><strong>Total Amount:</strong> R<span id="total-amount">0.00</span></p>
+            </section>
+
+            <!-- Billing Information Section -->
+            <div class="billing-info">
+                <h2>Billing Details</h2>
+                <form id="billing-form">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="0712345678" required>
+
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address" rows="3" placeholder="123 Farm Lane, Greenfield" required></textarea>
+                </form>
+            </div>
+
+            <!-- Payment Options Section -->
+            <section class="payment-options">
+                <h3>Payment Options</h3>
+                <form id="payment-form">
+                    <div class="payment-method">
+                        <input type="radio" id="credit-card" name="payment" value="credit-card" required>
+                        <label for="credit-card">Credit/Debit Card</label>
+                        <img src="images/visa.png" alt="Credit Card">
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" id="eft" name="payment" value="eft">
+                        <label for="eft">EFT (Electronic Funds Transfer)</label>
+                        <img src="images/eft-payment-mobi.png" alt="EFT">
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" id="snapscan" name="payment" value="snapscan">
+                        <label for="snapscan">SnapScan</label>
+                        <img src="images/snapscan-logo-vector.png" alt="SnapScan">
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" id="payfast" name="payment" value="payfast">
+                        <label for="payfast">PayFast</label>
+                        <img src="images/payfast.png" alt="PayFast">
+                    </div>
+                    <button type="submit">Complete Purchase</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AgriConnect. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

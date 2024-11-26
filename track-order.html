@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order - AgriConnect</title>
+    <link rel="stylesheet" href="css/trackorder.css">
+    <script src="js/track-order.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AgriConnect</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="track-order.html">Track Order</a></li>
+                <li><a href="transaction-history.html">Transaction History</a></li>
+                <li><a href="index.html" class="btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="track-order-container">
+            <h2>Track Your Orders</h2>
+            <div class="orders">
+                <div class="order-card">
+                    <h3>Order #12345</h3>
+                    <p>Status: <span class="status shipped">Shipped</span></p>
+                    <p>Items: 3</p>
+                    <p>Total: R1,200.00</p>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+                <div class="order-card">
+                    <h3>Order #12346</h3>
+                    <p>Status: <span class="status processing">Processing</span></p>
+                    <p>Items: 5</p>
+                    <p>Total: R2,500.00</p>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+                <!-- Add more orders dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AgriConnect. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
